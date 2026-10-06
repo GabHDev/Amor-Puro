@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Faz o site funcionar bem no celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Núcleo de Triagem</title>
+
+    <!-- Nosso arquivo de aparência -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="4a42d290-1946-4d7f-a793-1709893661be.png">
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO  (vai Aparecer depois que alguém entra no sistema) -->
+
+    <header class="topo" id="topo" hidden>
+
+        <div class="faixa">
+
+            <button class="marca" id="voltarInicio">
+    <img class="pulso" src="4a42d290-1946-4d7f-a793-1709893661be.png" alt="Logo">
+    Núcleo de Triagem
+</button>
+
+            <div class="direita">
+
+                <span class="quem" id="quemSou"></span>
+
+                <button class="btn neutro pequeno" id="btnTema">
+                    Tema
+                </button>
+
+                <button class="btn neutro pequeno" id="btnSair">
+                    Sair
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main>
+
+
+        <!-- TELA INICIAL -->
+
+        <section class="tela ativa" id="tela-inicio">
+
+            <div class="faixa capa">
+
+                <div class="colunas">
+
+                    <!-- Texto inicial -->
+
+                    <div>
+
+                        <h1>
+                            Quem chega primeiro não é quem é
+                            atendido primeiro. Quem corre mais risco é.
+                        </h1>
+
+                        <p class="lede">
+                            Este é o sistema de acolhimento e
+                            classificação de risco da unidade.
+                            O paciente informa seus dados e sintomas
+                            e a enfermagem realiza a triagem.
+                        </p>
+
+                        <div class="reguacor">
+
+                            <div class="v">
+                                Verde · pode aguardar
+                            </div>
+
+                            <div class="a">
+                                Amarelo · prioridade
+                            </div>
+
+                            <div class="r">
+                                Vermelho · risco de vida
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Em uma emergência com risco imediato,
+                            procure a equipe de saúde ou ligue 192.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Botões dos tipos de usuário -->
+
+                    <div class="portas">
+
+                        <button class="porta" data-ir="paciente">
+
+                            <span class="num">1</span>
+
+                            <span>
+                                <b>Sou paciente</b>
+
+                                <small>
+                                    Cadastrar meus dados,
+                                    informar sintomas e
+                                    informar minha dor.
+                                </small>
+                            </span>
+
+                            <span class="seta">›</span>
+
+                        </button>
+
+
+                        <button class="porta" data-ir="enfermeiro">
+
+                            <span class="num">2</span>
+
+                            <span>
+                                <b>Sou enfermeiro(a)</b>
+
+                                <small>
+                                    Ver a fila, abrir fichas,
+                                    registrar sinais vitais
+                                    e classificar o risco.
+                                </small>
+                            </span>
+
+                            <span class="seta">›</span>
+
+                        </button>
+
+
+                        <button class="porta" data-ir="tecnico">
+
+                            <span class="num">3</span>
+
+                            <span>
+                                <b>Sou técnico(a) em enfermagem</b>
+
+                                <small>
+                                    Registrar sinais vitais
+                                    e medidas dos pacientes.
+                                </small>
+                            </span>
+
+                            <span class="seta">›</span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <footer class="faixa">
+                Sistema de demonstração acadêmica
+            </footer>
+
+        </section>
+
+
+
+        <!-- MANUAL DO SISTEMA -->
+
+        <section class="tela" id="tela-manual">
+
+            <div class="faixa">
+
+                <h1>Manual do sistema</h1>
+
+                <p class="lede">
+                    Veja como utilizar cada parte do sistema.
+                </p>
+
+
+                <!-- Abas do manual -->
+
+                <div class="abas" data-grupo="manual">
+
+                    <button
+                        aria-selected="true"
+                        data-painel="m-paciente">
+                        Paciente
+                    </button>
+
+                    <button
+                        aria-selected="false"
+                        data-painel="m-enf">
+                        Enfermeiro(a)
+                    </button>
+
+                    <button
+                        aria-selected="false"
+                        data-painel="m-tec">
+                        Técnico(a)
+                    </button>
+
+                    <button
+                        aria-selected="false"
+                        data-painel="m-lgpd">
+                        LGPD
+                    </button>
+
+                    <button
+                        aria-selected="false"
+                        data-painel="m-tec2">
+                        Como o site foi feito
+                    </button>
+
+                </div>
+
+
+                <!-- Manual do paciente -->
+
+                <div class="painel ativo" id="m-paciente">
+
+                    <div class="cartao">
+
+                        <h2>Paciente</h2>
+
+                        <ol>
+
+                            <li>
+                                Clique em <b>Sou paciente</b>.
+                            </li>
+
+                            <li>
+                                Se for seu primeiro acesso,
+                                faça seu cadastro.
+                            </li>
+
+                            <li>
+                                Informe seus dados pessoais
+                                e informações de saúde.
+                            </li>
+
+                            <li>
+                                Aceite o termo de consentimento.
+                            </li>
+
+                            <li>
+                                Entre usando CPF e senha.
+                            </li>
+
+                            <li>
+                                Abra um atendimento e informe
+                                seus sintomas.
+                            </li>
+
+                            <li>
+                                Escolha a intensidade da dor.
+                            </li>
+
+                            <li>
+                                Envie o atendimento para a triagem.
+                            </li>
+
+                        </ol>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Manual do enfermeiro -->
+
+                <div class="painel" id="m-enf">
+
+                    <div class="cartao">
+
+                        <h2>Enfermeiro(a)</h2>
+
+                        <ol>
+
+                            <li>
+                                Entre na área do enfermeiro.
+                            </li>
+
+                            <li>
+                                Informe seus dados profissionais.
+                            </li>
+
+                            <li>
+                                Acesse a fila de triagem.
+                            </li>
+
+                            <li>
+                                Escolha um paciente.
+                            </li>
+
+                            <li>
+                                Veja a ficha do paciente.
+                            </li>
+
+                            <li>
+                                Registre os sinais vitais.
+                            </li>
+
+                            <li>
+                                Classifique o risco como
+                                verde, azul, amarelo,laranja ou vermelho.
+                            </li>
+
+                            <li>
+                                Faça as anotações da enfermagem.
+                            </li>
+
+                            <li>
+                                Finalize o atendimento.
+                            </li>
+
+                        </ol>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Manual do técnico -->
+
+                <div class="painel" id="m-tec">
+
+                    <div class="cartao">
+
+                        <h2>Técnico(a) em enfermagem</h2>
+
+                        <ol>
+
+                            <li>
+                                Entre na área do técnico.
+                            </li>
+
+                            <li>
+                                Informe seus dados profissionais.
+                            </li>
+
+                            <li>
+                                Acesse a fila.
+                            </li>
+
+                            <li>
+                                Veja os pacientes que precisam
+                                de atendimento.
+                            </li>
+
+                            <li>
+                                Registre os sinais vitais.
+                            </li>
+
+                            <li>
+                                Pode sugerir uma classificação
+                                de risco.
+                            </li>
+
+                            <li>
+                                O enfermeiro confirma a classificação.
+                            </li>
+
+                        </ol>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Área que explica o que é LGPD -->
+
+                <div class="painel" id="m-lgpd">
+
+                    <div class="cartao">
+
+                        <h2>LGPD</h2>
+
+                        <p>
+                            O sistema trabalha com dados pessoais
+                            e informações de saúde.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                O paciente aceita o consentimento.
+                            </li>
+
+                            <li>
+                                Os dados são usados para triagem
+                                e atendimento.
+                            </li>
+
+                            <li>
+                                O sistema registra algumas ações
+                                realizadas pelos usuários.
+                            </li>
+
+                            <li>
+                                O paciente pode consultar seus dados.
+                            </li>
+
+                        </ul>
+
+                        <div class="aviso alerta">
+
+                            Este projeto é uma demonstração
+                            acadêmica. Não devem ser utilizados
+                            dados reais de pacientes.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Como o sistema foi feito -->
+
+                <div class="painel" id="m-tec2">
+
+                    <div class="cartao">
+
+                        <h2>Como o site foi feito</h2>
+
+                        <p>
+                            <b>HTML</b> cria a estrutura do site.
+                        </p>
+
+                        <p>
+                            <b>CSS</b> deixa o site bonito e
+                            organizado.
+                        </p>
+
+                        <p>
+                            <b>JavaScript</b> faz os botões,
+                            formulários e outras funções funcionarem.
+                        </p>
+
+                        <p>
+                            O banco de dados guarda as informações
+                            dos pacientes, profissionais e atendimentos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="linha-botoes">
+
+                    <button
+                        class="btn neutro"
+                        data-ir="inicio">
+                        Voltar ao início
+                    </button>
+
+                    <button
+                        class="btn neutro"
+                        id="btnDemo">
+                        Carregar pacientes de exemplo
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ÁREA DO PACIENTE - LOGIN E CADASTRO -->
+
+        <section class="tela" id="tela-paciente-entrada">
+
+            <div class="faixa">
+
+                <h1>Área do paciente</h1>
+
+
+                <!-- Abas -->
+
+                <div class="abas" data-grupo="pac">
+
+                    <button
+                        aria-selected="true"
+                        data-painel="p-entrar">
+                        Entrar
+                    </button>
+
+                    <button
+                        aria-selected="false"
+                        data-painel="p-criar">
+                        Criar cadastro
+                    </button>
+
+                </div>
+
+
+                <!-- LOGIN -->
+
+                <div class="painel ativo" id="p-entrar">
+
+                    <div class="cartao">
+
+                        <div class="grade">
+
+                            <div class="campo">
+
+                                <label for="le-cpf">
+                                    CPF
+                                </label>
+
+                                <input
+                                    id="le-cpf"
+                                    type="text"
+                                    placeholder="000.000.000-00">
+
+                            </div>
+
+
+                            <div class="campo">
+
+                                <label for="le-senha">
+                                    Senha
+                                </label>
+
+                                <input
+                                    id="le-senha"
+                                    type="password">
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="erro"
+                            id="le-erro">
+                        </div>
+
+                        <button
+                            class="btn"
+                            id="btnEntrarPaciente">
+                            Entrar
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CADASTRO -->
+
+                <div class="painel" id="p-criar">
+
+                    <form id="formCadastro">
+
+
+                        <!-- Dados pessoais -->
+
+                        <fieldset>
+
+                            <legend>Identificação</legend>
+
+                            <div class="grade">
+
+                                <div class="campo">
+                                    <label for="c-nome">
+                                        Nome completo
+                                    </label>
+
+                                    <input id="c-nome">
+                                </div>
+
+
+                                <div class="campo">
+                                    <label for="c-social">
+                                        Nome social
+                                    </label>
+
+                                    <input id="c-social">
+                                </div>
+
+
+                                <div class="campo">
+                                    <label for="c-nasc">
+                                        Data de nascimento
+                                    </label>
+
+                                    <input
+                                        id="c-nasc"
+                                        type="date">
+                                </div>
+
+
+                                <div class="campo">
+                                    <label for="c-cpf">
+                                        CPF
+                                    </label>
+
+                                    <input id="c-cpf">
+                                </div>
+
+
+                                <div class="campo">
+                                    <label for="c-rg">
+                                        RG
+                                    </label>
+
+                                    <input id="c-rg">
+                                </div>
+
+
+                                <div class="campo">
+                                    <label for="c-tel">
+                                        Telefone
+                                    </label>
+
+                                    <input id="c-tel">
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="c-sangue">
+                                        Tipo sanguíneo
+                                    </label>
+
+                                    <select id="c-sangue">
+
+                                        <option value="">
+                                            Não sei
+                                        </option>
+
+                                        <option>A+</option>
+                                        <option>A-</option>
+                                        <option>B+</option>
+                                        <option>B-</option>
+                                        <option>AB+</option>
+                                        <option>AB-</option>
+                                        <option>O+</option>
+                                        <option>O-</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+
+                        <!-- Endereço -->
+
+                        <fieldset>
+
+                            <legend>Endereço</legend>
+
+                            <div class="grade">
+
+                                <div class="campo">
+                                    <label for="c-cep">
+                                        CEP
+                                    </label>
+
+                                    <input id="c-cep">
+                                </div>
+
+                                <div class="campo">
+                                    <label for="c-rua">
+                                        Rua
+                                    </label>
+
+                                    <input id="c-rua">
+                                </div>
+
+                                <div class="campo">
+                                    <label for="c-num">
+                                        Número
+                                    </label>
+
+                                    <input id="c-num">
+                                </div>
+
+                                <div class="campo">
+                                    <label for="c-bairro">
+                                        Bairro
+                                    </label>
+
+                                    <input id="c-bairro">
+                                </div>
+
+                                <div class="campo">
+                                    <label for="c-cidade">
+                                        Cidade
+                                    </label>
+
+                                    <input id="c-cidade">
+                                </div>
+
+                                <div class="campo">
+                                    <label for="c-uf">
+                                        Estado
+                                    </label>
+
+                                    <input
+                                        id="c-uf"
+                                        maxlength="2">
+
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+
+                        <!-- Saúde -->
+
+                        <fieldset>
+
+                            <legend>Saúde</legend>
+
+                            <div class="grade">
+
+                                <div class="campo">
+
+                                    <label for="c-alergia">
+                                        Alergias
+                                    </label>
+
+                                    <textarea
+                                        id="c-alergia"
+                                        placeholder="Ex.: dipirona">
+                                    </textarea>
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label>
+                                        Doenças
+                                    </label>
+
+                                    <div id="c-doencas">
+
+                                        <label class="caixinha">
+                                            <input
+                                                type="checkbox"
+                                                value="Diabetes">
+                                            Diabetes
+                                        </label>
+
+                                        <label class="caixinha">
+                                            <input
+                                                type="checkbox"
+                                                value="Hipertensão">
+                                            Hipertensão
+                                        </label>
+
+                                        <label class="caixinha">
+                                            <input
+                                                type="checkbox"
+                                                value="Problema cardíaco">
+                                            Problema cardíaco
+                                        </label>
+
+                                        <label class="caixinha">
+                                            <input
+                                                type="checkbox"
+                                                value="Asma">
+                                            Asma
+                                        </label>
+
+                                        <label class="caixinha">
+                                            <input
+                                                type="checkbox"
+                                                value="Epilepsia">
+                                            Epilepsia
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="c-outras">
+                                        Outras doenças
+                                    </label>
+
+                                    <textarea id="c-outras"></textarea>
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="c-medic">
+                                        Medicamentos de uso contínuo
+                                    </label>
+
+                                    <textarea id="c-medic"></textarea>
+
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+
+                        <!-- Contato de emergência -->
+
+                        <fieldset>
+
+                            <legend>
+                                Contato de emergência
+                            </legend>
+
+                            <div class="grade">
+
+                                <div class="campo">
+                                    <label for="c-em-nome">
+                                        Nome
+                                    </label>
+
+                                    <input id="c-em-nome">
+                                </div>
+
+
+                                <div class="campo">
+                                    <label for="c-em-par">
+                                        Parentesco
+                                    </label>
+
+                                    <input id="c-em-par">
+                                </div>
+
+
+                                <div class="campo">
+                                    <label for="c-em-tel">
+                                        Telefone
+                                    </label>
+
+                                    <input id="c-em-tel">
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+
+                        <!-- Senha e consentimento -->
+
+                        <fieldset>
+
+                            <legend>
+                                Acesso e consentimento
+                            </legend>
+
+                            <div class="grade">
+
+                                <div class="campo">
+
+                                    <label for="c-senha">
+                                        Senha
+                                    </label>
+
+                                    <input
+                                        id="c-senha"
+                                        type="password">
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="c-senha2">
+                                        Repita a senha
+                                    </label>
+
+                                    <input
+                                        id="c-senha2"
+                                        type="password">
+
+                                </div>
+
+                            </div>
+
+
+                            <label class="caixinha">
+
+                                <input
+                                    type="checkbox"
+                                    id="c-consent">
+
+                                <span>
+                                    Autorizo o uso dos meus dados
+                                    para fins de triagem e
+                                    atendimento, conforme a LGPD.
+                                </span>
+
+                            </label>
+
+
+                            <div
+                                class="erro"
+                                id="c-erro">
+                            </div>
+
+
+                            <button
+                                class="btn"
+                                type="submit">
+                                Criar cadastro
+                            </button>
+
+                        </fieldset>
+
+                    </form>
+
+                </div>
+
+
+                <button
+                    class="btn neutro"
+                    data-ir="inicio">
+                    Voltar ao início
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PAINEL DO PACIENTE -->
+
+        <section
+            class="tela"
+            id="tela-paciente-painel">
+
+            <div class="faixa">
+
+                <h1 id="pac-saudacao">
+                    Olá
+                </h1>
+
+
+                <!-- Abas do paciente -->
+
+                <div class="abas" data-grupo="pacp">
+
+                    <button
+                        aria-selected="true"
+                        data-painel="pp-atend">
+                        Abrir atendimento
+                    </button>
+
+                    <button
+                        aria-selected="false"
+                        data-painel="pp-dados">
+                        Meus dados
+                    </button>
+
+                    <button
+                        aria-selected="false"
+                        data-painel="pp-hist">
+                        Meu histórico
+                    </button>
+
+                    <button
+                        aria-selected="false"
+                        data-painel="pp-priv">
+                        Privacidade
+                    </button>
+
+                </div>
+
+
+                <!-- NOVO ATENDIMENTO -->
+
+                <div
+                    class="painel ativo"
+                    id="pp-atend">
+
+                    <div id="atendAberto"></div>
+
+                    <form
+                        id="formAtend"
+                        class="cartao">
+
+                        <h2>
+                            Por que você veio hoje?
+                        </h2>
+
+
+                        <div class="grade">
+
+                            <div class="campo">
+
+                                <label for="a-motivo">
+                                    Motivo principal
+                                </label>
+
+                                <input
+                                    id="a-motivo"
+                                    placeholder="Ex.: dor no peito">
+
+                            </div>
+
+
+                            <div class="campo">
+
+                                <label for="a-inicio">
+                                    Começou quando?
+                                </label>
+
+                                <input id="a-inicio">
+
+                            </div>
+
+
+                            <div class="campo">
+
+                                <label for="a-sintomas">
+                                    Descreva os sintomas
+                                </label>
+
+                                <textarea
+                                    id="a-sintomas">
+                                </textarea>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Escala de dor -->
+
+                        <h3>
+                            Qual o tamanho da sua dor?
+                        </h3>
+
+                        <div
+                            class="dor-lista"
+                            id="escalaDor">
+                        </div>
+
+                        <p id="dorLegenda">
+                            Nenhuma carinha selecionada
+                        </p>
+
+
+                        <!-- Acompanhante -->
+
+                        <fieldset>
+
+                            <legend>
+                                Acompanhante
+                            </legend>
+
+                            <div class="grade">
+
+                                <div class="campo">
+
+                                    <label for="ac-nome">
+                                        Nome
+                                    </label>
+
+                                    <input id="ac-nome">
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="ac-par">
+                                        Parentesco
+                                    </label>
+
+                                    <input id="ac-par">
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="ac-rg">
+                                        RG
+                                    </label>
+
+                                    <input id="ac-rg">
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="ac-cpf">
+                                        CPF
+                                    </label>
+
+                                    <input id="ac-cpf">
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="ac-tel">
+                                        Telefone
+                                    </label>
+
+                                    <input id="ac-tel">
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="ac-end">
+                                        Endereço
+                                    </label>
+
+                                    <input id="ac-end">
+
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+
+                        <div
+                            class="erro"
+                            id="a-erro">
+                        </div>
+
+
+                        <button
+                            class="btn"
+                            type="submit">
+                            Enviar para a triagem
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- DADOS DO PACIENTE -->
+
+                <div
+                    class="painel"
+                    id="pp-dados">
+
+                    <div class="cartao">
+
+                        <h2>
+                            Minha ficha
+                        </h2>
+
+                        <div class="rolagem">
+
+                            <table
+                                class="ficha"
+                                id="tabelaMeusDados">
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HISTÓRICO -->
+
+                <div
+                    class="painel"
+                    id="pp-hist">
+
+                    <div class="cartao">
+
+                        <h2>
+                            Minhas idas ao hospital
+                        </h2>
+
+                        <div id="histPaciente"></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRIVACIDADE -->
+
+                <div
+                    class="painel"
+                    id="pp-priv">
+
+                    <div class="cartao">
+
+                        <h2>
+                            Privacidade
+                        </h2>
+
+                        <p id="consentTexto"></p>
+
+                        <div class="linha-botoes">
+
+                            <button
+                                class="btn neutro"
+                                id="btnExportar">
+                                Baixar meus dados
+                            </button>
+
+                            <button
+                                class="btn perigo"
+                                id="btnExcluir">
+                                Excluir meus dados
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="cartao">
+
+                        <h3>
+                            Histórico de acessos
+                        </h3>
+
+                        <div class="rolagem">
+
+                            <table id="tabelaAuditoria">
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Quando</th>
+                                        <th>Quem</th>
+                                        <th>Perfil</th>
+                                        <th>O que fez</th>
+                                    </tr>
+
+                                </thead>
+
+                                <tbody></tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- LOGIN DO PROFISSIONAL -->
+
+        <section
+            class="tela"
+            id="tela-prof-entrada">
+
+            <div class="faixa">
+
+                <h1 id="prof-titulo">
+                    Área do enfermeiro
+                </h1>
+
+                <p
+                    class="lede"
+                    id="prof-sub">
+                </p>
+
+
+                <div class="cartao">
+
+                    <div class="grade">
+
+                        <div class="campo">
+
+                            <label for="f-nome">
+                                Nome completo
+                            </label>
+
+                            <input id="f-nome">
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="f-cpf">
+                                CPF
+                            </label>
+
+                            <input id="f-cpf">
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="f-rg">
+                                RG
+                            </label>
+
+                            <input id="f-rg">
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="f-coren">
+                                Número do COREN
+                            </label>
+
+                            <input id="f-coren">
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="f-senha">
+                                Senha
+                            </label>
+
+                            <input
+                                id="f-senha"
+                                type="password">
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="erro"
+                        id="f-erro">
+                    </div>
+
+
+                    <button
+                        class="btn"
+                        id="btnEntrarProf">
+                        Entrar no plantão
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="btn neutro"
+                    data-ir="inicio">
+                    Voltar ao início
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FILA DE TRIAGEM -->
+
+        <section
+            class="tela"
+            id="tela-prof-painel">
+
+            <div class="faixa">
+
+                <h1>
+                    Fila de triagem
+                </h1>
+
+                <p
+                    class="lede"
+                    id="resumoFila">
+                </p>
+
+
+                <div
+                    class="aviso"
+                    id="avisoPerfil">
+                </div>
+
+
+                <div class="duas-colunas">
+
+
+                    <!-- FILA -->
+
+                    <div>
+
+                        <div class="rolagem">
+
+                            <table id="tabelaFila">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Risco</th>
+                                        <th>Paciente</th>
+                                        <th>Dor</th>
+                                        <th>Espera</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody></tbody>
+
+                            </table>
+
+                        </div>
+
+
+                        <label class="caixinha">
+
+                            <input
+                                type="checkbox"
+                                id="verFinalizados">
+
+                            Mostrar atendimentos finalizados
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- FICHA DO PACIENTE -->
+
+                    <div id="fichaPaciente">
+
+                        <div class="cartao vazio">
+
+                            Selecione um paciente
+                            na fila para abrir a ficha.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!--BOTÃO DO MANUAL-->
+
+    <button
+        class="discreto"
+        id="btnManual">
+
+        <span class="interro">?</span>
+
+        Como usar o site
+
+    </button>
+
+
+    <!-- Mensagens do sistema -->
+
+    <div
+        class="recado"
+        id="recado">
+    </div>
+
+
+    <!--JAVASCRIPT-->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
